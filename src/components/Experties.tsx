@@ -69,7 +69,7 @@ function Experties() {
           shaping a more sustainable and efficient energy future.
         </p>
         <div className="flex flex-col items-start lg:flex-row bg-muted justify-between -mx-6 px-8 md:-mx-[100px] lg:px-[100px] mt-8 lg:mt-[131px] gap-[40px] lg:gap-[80px]">
-          <Image src={ex5} alt="" className="lg:-mt-[71px] lg:mb-[70px] mx-auto" />
+          <Image src={ex5} alt="" className="mt-8 lg:-mt-[71px] lg:mb-[70px] mx-auto" />
           <div className="max-w-[787px] lg:mt-[100px] pb-8">
             <h2 className="text-neutral-800 text-[40px] font-normal">
               Deep knowledge in the field

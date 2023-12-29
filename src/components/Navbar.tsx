@@ -15,7 +15,9 @@ export default function Navbar() {
   console.log(pathname)
   return (
     <div className="flex items-center justify-between py-[26px] absolute top-0 z-50 w-[calc(100vw-48px)] md:w-[calc(100%-200px)]">
+      <Link href={'/'}>
       <Image src={pathname == '/' ||pathname=='/services'||pathname=='/portfolio'?logo:dark} alt="logo" />
+      </Link>
       <div>
         {
           pathname == '/' ||pathname=='/services'||pathname=='/portfolio'?
