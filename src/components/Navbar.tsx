@@ -6,12 +6,15 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { AlignJustify } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 
 
 const navItems = ["About us", "Services", "Portfolio", "Contact us"];
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = window.location.pathname
+  
+  const pathname = usePathname()
   console.log(pathname)
   return (
     <div className="flex items-center justify-between py-[26px] absolute top-0 z-50 w-[calc(100vw-48px)] md:w-[calc(100%-200px)]">
