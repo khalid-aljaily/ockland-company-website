@@ -13,7 +13,6 @@ import { usePathname } from "next/navigation";
 const navItems = ["About us", "Services", "Portfolio", "Contact us"];
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  
   const pathname = usePathname()
   console.log(pathname)
   return (
@@ -56,9 +55,9 @@ export default function Navbar() {
         navItems.map((item, index) => (
           <li key={index} >
             {item=='Contact us'?
-          <Button className="rounded-full px-[40px] py-4">{item}</Button>
+          <Button className="rounded-full px-[40px] py-4"><Link href={item.toLowerCase()}>{item}</Link></Button>
           :
-          <Button variant={'link'} className="p-0 text-base font-normal "><Link href={item.toLocaleLowerCase()}>{item}</Link></Button>
+          <Button variant={'link'} className="p-0 text-base font-normal "><Link href={item.toLowerCase()}>{item}</Link></Button>
           }
           
           </li>

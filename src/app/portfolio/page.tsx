@@ -31,10 +31,9 @@ function page() {
       >
         <div className="absolute h-full w-full inset-0 bg-black/50" />
         <div className="z-10">
-          <h2 className="text-white text-[64px] font-normal">Services</h2>
+          <h2 className="text-white text-[64px] font-normal">Portfolio</h2>
           <p className="mt-[48px] max-w-[535px] text-white text-lg font-normal  leading-[25px]">
-            Discover our comprehensive range of services tailored to meet your
-            energy efficiency, LED lighting, photovoltaic energy, and much more.
+          Explore our portfolio of remarkable projects where innovation and sustainability converge.
           </p>
         </div>
       </div>
