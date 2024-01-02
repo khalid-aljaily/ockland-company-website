@@ -33,7 +33,8 @@ function page() {
         <div className="z-10">
           <h2 className="text-white text-[64px] font-normal">Portfolio</h2>
           <p className="mt-[48px] max-w-[535px] text-white text-lg font-normal  leading-[25px]">
-          Explore our portfolio of remarkable projects where innovation and sustainability converge.
+            Explore our portfolio of remarkable projects where innovation and
+            sustainability converge.
           </p>
         </div>
       </div>
@@ -51,7 +52,10 @@ function page() {
         </p>
         <div className="flex justify-between max-w-5xl flex-wrap gap-5">
           {dist.map((dist, index) => (
-            <div key={index} className="flex gap-5 items-center justify-center md:justify-start">
+            <div
+              key={index}
+              className="flex gap-5 items-center justify-center md:justify-start"
+            >
               <div className="bg-primary p-2 rounded-md">
                 <Image src={dist.icon} alt="" />
               </div>
@@ -65,7 +69,7 @@ function page() {
       <div>
         <PortfolioElements />
         <div className="px-8 lg:px-[100px] ">
-        <ContactUs />
+          <ContactUs />
         </div>
       </div>
     </div>

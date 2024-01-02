@@ -1,5 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import locationImg from "@/assets/image 3.png";
+import locationIcon from "@/assets/Vector.svg";
 
 function page() {
   return (
@@ -9,7 +13,7 @@ function page() {
           <h2 className="text-zinc-700 text-[64px] font-normal">Contact us</h2>
           <p className="mt-[48px] max-w-[535px] text-zinc-700 text-lg font-normal  leading-[25px]">
             Our team is here to assist you on your journey towards a sustainable
-            and efficient energy future.
+            and efficient energy furure.
           </p>
         </div>
       </div>
@@ -66,7 +70,43 @@ function page() {
               className="border-muted border focus:!border-primary !outline-none px-5 py-[10px] w-full mt-5"
               placeholder="Message "
             />
+            <div className="flex items-center my-5">
+              <Checkbox
+                id="confirmation"
+                className="rounded-none border-muted h-6 w-6"
+              />
+              <label
+                htmlFor="confirmation"
+                className="ml-2 max-w-[727px] text-zinc-700 text-lg font-normal font-['Inter Tight'] leading-[25px]"
+              >
+                I consent to Oakland C.E. processing my data for contact
+                purposes.
+              </label>
+            </div>
+            <Button type="button" className="px-6 py-4 rounded-full">
+              Send
+            </Button>
           </form>
+        </div>
+        <div className="flex gap-5  mt-[100px] flex-col md:flex-row">
+          <div className="relative w-full h-[518px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d5698.248192584428!2d-7.737418681880195!3d41.299406813266096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAvenida%20Marta%20Lopes%2C%20N%C2%BA2%208400-401%20Vila%20Real%2C%20Portugal!5e1!3m2!1sen!2s!4v1704212138737!5m2!1sen!2s"
+              loading="lazy"
+              className="w-full rounded-md h-full"
+            ></iframe>
+            <Image
+              src={locationIcon}
+              alt="location icon"
+              className="absolute h-12 w-12 top-1/2 left-[10%] sm:left-[20%] md:left-[30%] z-10"
+            />
+          </div>
+
+          <Image
+            src={locationImg}
+            alt="location"
+            className="w-full h-[518px] object-cover flex-1 "
+          />
         </div>
       </div>
     </div>

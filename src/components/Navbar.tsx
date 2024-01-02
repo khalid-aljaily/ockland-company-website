@@ -7,14 +7,14 @@ import { Button } from "./ui/button";
 import { AlignJustify } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import { useRouter } from "next/navigation";
 
 
 const navItems = ["About us", "Services", "Portfolio", "Contact us"];
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname()
-  console.log(pathname)
+  const router = useRouter()
   return (
     <div className="flex items-center justify-between py-[26px] absolute top-0 z-50 w-[calc(100vw-48px)] md:w-[calc(100%-200px)]">
       <Link href={'/'}>
@@ -45,9 +45,9 @@ export default function Navbar() {
         navItems.map((item, index:number) => (
           <li key={index} >
             {item=='Contact us'?
-          <Button className="bg-white/40 hover:bg-white/30  rounded-full px-[40px] py-4">{item}</Button>
+          <Button className="bg-white/40 hover:bg-white/30  rounded-full px-[40px] py-4" onClick={()=>{router.push(item.toLocaleLowerCase())}}>{item}</Button>
           :
-          <Button variant={'link'} className="p-0 text-base font-normal text-white"><Link href={item.toLocaleLowerCase()}>{item}</Link></Button>
+          <Button variant={'link'} className="p-0 text-base font-normal text-white" onClick={()=>{router.push(item.toLocaleLowerCase())}}>{item}</Button>
           }
           
           </li>
@@ -55,9 +55,9 @@ export default function Navbar() {
         navItems.map((item, index) => (
           <li key={index} >
             {item=='Contact us'?
-          <Button className="rounded-full px-[40px] py-4"><Link href={item.toLowerCase()}>{item}</Link></Button>
+          <Button className="rounded-full px-[40px] py-4" onClick={()=>{router.push(item.toLocaleLowerCase())}}>{item}</Button>
           :
-          <Button variant={'link'} className="p-0 text-base font-normal "><Link href={item.toLowerCase()}>{item}</Link></Button>
+          <Button variant={'link'} className="p-0 text-base font-normal " onClick={()=>{router.push(item.toLocaleLowerCase())}}>{item}</Button>
           }
           
           </li>
@@ -69,9 +69,9 @@ export default function Navbar() {
           {navItems.map((item, index) => (
            <li key={index} >
            {item=='Contact us'?
-         <Button className="bg-primary/70 hover:bg-primary/80 rounded-full px-[40px] py-4">{item}</Button>
+         <Button className="bg-primary/70 hover:bg-primary/80 rounded-full px-[40px] py-4" onClick={()=>{router.push(item.toLocaleLowerCase())}}>{item}</Button>
          :
-         <Link href={'#'}>{item}</Link>
+         <Link href={item.toLocaleLowerCase()} >{item}</Link>
          }
          
          </li>

@@ -24,10 +24,13 @@ function Page() {
     }
 
     api.on("select", () => {
-      if (api.selectedScrollSnap() !== 0&&!api.containerNode().classList.contains('-mb-[600px]')) {
-        api.containerNode().classList.add('-mb-[600px]') 
+      if (
+        api.selectedScrollSnap() !== 0 &&
+        !api.containerNode().classList.contains("-mb-[600px]")
+      ) {
+        api.containerNode().classList.add("-mb-[600px]");
       } else if (api.selectedScrollSnap() == 0) {
-        api.containerNode().classList.remove('-mb-[600px]') 
+        api.containerNode().classList.remove("-mb-[600px]");
       }
     });
   }, [api]);
