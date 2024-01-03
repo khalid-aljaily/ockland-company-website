@@ -9,7 +9,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import {motion, AnimatePresence} from 'framer-motion'
-
+import white from '@/assets/Type=Full White.svg'
 const navItems = ["About us", "Services", "Portfolio", "Contact us"];
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <div className="flex items-center justify-between py-[26px] absolute top-0 z-50 w-[calc(100vw-48px)] md:w-[calc(100%-200px)]">
       <Link href={'/'}>
-      <Image src={pathname == '/' ||pathname=='/services'||pathname=='/portfolio'?logo:dark} alt="logo" />
+      <Image src={pathname == '/' ||pathname=='/services'?logo:pathname=='/portfolio'?white:dark} alt="logo" />
       </Link>
       <div>
         {
