@@ -46,11 +46,11 @@ function page() {
   return (
     <div className="-mx-6 md:-mx-[100px] ">
       <div className="bg-primary px-8 lg:px-[100px] h-[650px] flex items-end py-[64px] ">
-      
-          <PageMainTxt title="Services" text=" Discover our comprehensive range of services tailored to meet your
-            energy efficiency, LED lighting, photovoltaic energy, and much more."/>
-         
-        
+        <PageMainTxt
+          title="Services"
+          text=" Discover our comprehensive range of services tailored to meet your
+            energy efficiency, LED lighting, photovoltaic energy, and much more."
+        />
       </div>
       {/* first section */}
       <div className="px-8 lg:px-[100px] mt-[100px] lg:mt-[140px]">
@@ -91,7 +91,7 @@ function page() {
           </h2>
           <p>
             Explore our portfolio of remarkable projects where innovation and
-            sustainability converge. Discover how we've transformed energy
+            sustainability converge. Discover how we&apos;ve transformed energy
             landscapes and elevated standards in the industry.
           </p>
           <Button

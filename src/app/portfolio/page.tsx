@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import chart from "@/assets/material-symbols_equalizer.svg";
 import people from "@/assets/material-symbols_groups.svg";

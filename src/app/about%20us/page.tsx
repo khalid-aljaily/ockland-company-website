@@ -33,7 +33,7 @@ const AnimatedImg = motion(Image)
         <motion.p initial= {{opacity:0,x:-10}} whileInView={{opacity:1,x:0,transition:{duration:.5,delay:.2}}} viewport={{once:true}} className="text-zinc-700 text-lg font-normal leading-[25px] max-w-[787px]">
           Innovation has been at the heart of our journey right from the
           beginning. At Oakland C.E., we believe that staying at the forefront
-          of technology and sustainable practices is essential. We've
+          of technology and sustainable practices is essential. We&apos;ve
           consistently sought innovative solutions in energy efficiency, LED
           lighting, photovoltaic energy, and electric mobility to shape a
           brighter and greener future.
@@ -61,14 +61,14 @@ const AnimatedImg = motion(Image)
           </motion.p>
         </div>
         <motion.p initial= {{opacity:0,x:10}} whileInView={{opacity:1,x:0,transition:{duration:.5,delay:.2}}} viewport={{once:true}} className="text-zinc-700 text-lg font-normal leading-[25px] max-w-[787px] ml-auto">
-          From our company's inception, innovation has been ingrained in our
-          DNA. It's not just a buzzword; it's the driving force behind
+          From our company&apos;s inception, innovation has been ingrained in our
+          DNA. It&apos;s not just a buzzword; it&apos;s the driving force behind
           everything we do. Our founders were visionaries who understood that to
           make a real impact in the energy sector, we needed to lead with
           innovation. This commitment to cutting-edge solutions has allowed us
-          to consistently push the boundaries of what's possible in energy
+          to consistently push the boundaries of what&apos;s possible in energy
           efficiency, LED lighting, photovoltaic energy, and electric mobility.
-          We've fostered a culture that encourages creativity, embraces change,
+          We&apos;ve fostered a culture that encourages creativity, embraces change,
           and thrives on challenges. As we continue to grow, our dedication to
           innovation remains unwavering, ensuring that we remain a trailblazer
           in the industry.

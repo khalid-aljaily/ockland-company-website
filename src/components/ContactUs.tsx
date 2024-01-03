@@ -8,7 +8,7 @@ function ContactUs() {
   return (
     <div className='space-y-[48px] max-w-[779px] mr-auto'>
       <h2 className='text-neutral-800 text-[40px]'>Get in touch with us</h2>
-      <p>If you're ready to explore how our expertise in energy efficiency, LED lighting, photovoltaic energy, and electric mobility can benefit your projects, don't hesitate to reach out. We're here to listen, collaborate, and provide you with tailored solutions that align with your specific needs and goals.</p>
+      <p>If you&apos;re ready to explore how our expertise in energy efficiency, LED lighting, photovoltaic energy, and electric mobility can benefit your projects, don&apos;t hesitate to reach out. We&apos;re here to listen, collaborate, and provide you with tailored solutions that align with your specific needs and goals.</p>
 
       <Button
               variant={"link"}

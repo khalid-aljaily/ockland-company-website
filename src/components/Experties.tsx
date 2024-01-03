@@ -110,7 +110,7 @@ const listVariant = {
               have positioned us as leaders in the industry. With two decades of
               market leadership, we have honed our knowledge in energy
               efficiency, LED lighting, photovoltaic energy, and electric
-              mobility to a level that sets us apart. Our team's profound
+              mobility to a level that sets us apart. Our team&apos;s profound
               understanding of these domains enables us to provide innovative,
               tailored solutions that not only meet but exceed the expectations
               of our clients.
