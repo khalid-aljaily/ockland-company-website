@@ -64,7 +64,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="flex-1 my-[48px] md:my-0 text-center w-full">
-          <Image src={iso} alt="" className="mr-auto md:mr-0  ml-auto " />
+          <Image loading="eager" src={iso} alt="" className="mr-auto md:mr-0  ml-auto " />
         </div>
       </div>
       <p className="md:mt-[70px] text-white text-center lg:text-left">

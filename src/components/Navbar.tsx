@@ -4,7 +4,7 @@ import logo from "../assets/Type=Normal.svg";
 import dark from '../assets/Type=Dark.svg'
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { AlignJustify } from "lucide-react";
+import { AlignJustify,X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
@@ -29,14 +29,14 @@ export default function Navbar() {
           className="rounded-full p-2 bg-white/40 hover:bg-white/30 block lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <AlignJustify className="text-white" />
+          {isOpen?<X className="text-white"/>:<AlignJustify className="text-white" />}
         </Button>
         :
         <Button
         className="rounded-full p-2 block lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <AlignJustify className="text-white" />
+        {isOpen?<X className="text-white"/>:<AlignJustify className="text-white" />}
       </Button>
         }
         

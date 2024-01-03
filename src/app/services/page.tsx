@@ -82,7 +82,7 @@ function page() {
             </p>
           </div>
           <div className="flex-1">
-            <Image src={servicesImg} alt="srvices" className="max-w-full" />
+            <Image loading="eager" src={servicesImg} alt="srvices" className="max-w-full" />
           </div>
         </div>
         <div className="space-y-[48px] max-w-[779px] mr-auto">
@@ -103,7 +103,7 @@ function page() {
               className="flex gap-2 items-center button "
             >
               View our portfolio
-              <Image src={arrow} alt="" className="arrow" />
+              <Image loading="eager" src={arrow} alt="" className="arrow" />
             </Link>
           </Button>
         </div>

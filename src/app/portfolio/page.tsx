@@ -53,7 +53,7 @@ function page() {
               className="flex gap-5 items-center justify-center md:justify-start"
             >
               <div className="bg-primary p-2 rounded-md">
-                <Image src={dist.icon} alt="" />
+                <Image loading="eager" src={dist.icon} alt="" />
               </div>
               <h3 className="text-neutral-800 text-[32px] font-normal ">
                 {dist.title}
