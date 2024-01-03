@@ -79,6 +79,7 @@ export default function Navbar() {
         className="bg-primary hover:bg-primary/80 rounded-full px-[40px] py-4"
         onClick={() => {
           router.push(item.toLocaleLowerCase());
+          setIsOpen(!isOpen)
         }}
       >
         {item}
@@ -89,6 +90,7 @@ export default function Navbar() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4, delay: index * 0.4 }}
         href={item.toLocaleLowerCase()}
+        onClick={()=>setIsOpen(!isOpen)}
         className="block mx-0"
       >
         {item}

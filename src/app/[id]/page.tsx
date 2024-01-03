@@ -66,7 +66,6 @@ function Page() {
                   {project?.text}
                 </motion.p>
                 <AnimatedImg
-                  loading="eager"
                   initial={{ opacity: 0, x: -5 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
@@ -78,7 +77,6 @@ function Page() {
                 />
                 {project?.imgs[1] && (
                   <AnimatedImg
-                    loading="eager"
                     initial={{ opacity: 0, x: 5 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 }}

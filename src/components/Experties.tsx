@@ -80,7 +80,6 @@ const listVariant = {
                 className="relative h-[375px] w-[312px] md:w-auto md rounded-xl overflow-hidden shrink-0"
               >
                 <Image
-                  loading="eager"
                   src={item.img}
                   alt={item.title}
                   className=" h-full object-cover hover:scale-105 duration-300 "
