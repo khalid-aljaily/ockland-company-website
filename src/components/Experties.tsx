@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import ex1 from "../assets/ex1.jpg";
 import ex2 from "../assets/ex2.jpg";
@@ -7,7 +8,7 @@ import ex5 from "../assets/image 3.png";
 import arrow from "../assets/→.svg";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import {motion} from "framer-motion"
 import "../app/globals.css";
 const experties = [
   {
@@ -28,6 +29,29 @@ const experties = [
   },
 ];
 function Experties() {
+  const boxVariant = {
+    hidden: {
+
+    },
+    visible: {
+        transition: {
+            staggerChildren: 0.3, 
+        },
+    },
+};
+
+const listVariant = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition:{
+          duration:.7
+        }
+    },
+};
+
   return (
     <>
       <div className="my-[100px] lg:my-[140px]">
@@ -42,9 +66,16 @@ function Experties() {
           </p>
         </div>
         <div className="overflow-auto">
-          <div className="grid grid-cols-4  gap-5 overflow-auto min-w-[1312px] lg:min-w-[unset]">
+          <motion.div
+           variants={boxVariant}
+           whileInView="visible"
+           viewport={{ once: true }}
+           initial="hidden"
+                className="grid grid-cols-4 gap-5 overflow-auto min-w-[1312px] lg:min-w-[unset]">
             {experties.map((item, index) => (
-              <div
+              <motion.div 
+              viewport={{ once: true }}
+              variants={listVariant}
                 key={index}
                 className="relative h-[375px] w-[312px] md:w-auto md rounded-xl overflow-hidden shrink-0"
               >
@@ -56,21 +87,21 @@ function Experties() {
                 <h3 className="absolute bottom-5 left-3 z-20 text-white text-lg font-normal leading-[25px]">
                   {item.title}
                 </h3>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-        <p className="ml-auto mt-[80px] lg:mt-[140px] max-w-[779px] text-zinc-700 text-lg font-normal leading-[25px]">
+        <motion.p initial={{opacity:0,x:30}} viewport={{once:true}} whileInView={{opacity:1,x:0,transition:{duration:.7,delay:.2}}} className="ml-auto mt-[80px] lg:mt-[140px] max-w-[779px] text-zinc-700 text-lg font-normal leading-[25px]">
           Leading the market for two decades, we have been experts in energy
           efficiency. With an unwavering commitment to innovation, we offer
           tailored solutions for projects of all sizes. From LED lighting to
           photovoltaic energy and electric mobility, our dedicated team works
           tirelessly to deliver cutting-edge results. We are committed to
           shaping a more sustainable and efficient energy future.
-        </p>
+        </motion.p>
         <div className="flex flex-col items-start lg:flex-row bg-muted justify-between -mx-6 px-8 md:-mx-[100px] lg:px-[100px] mt-8 lg:mt-[131px] gap-[40px] lg:gap-[80px]">
           <Image src={ex5} alt="" className="mt-8 lg:-mt-[71px] lg:mb-[70px] mx-auto" />
-          <div className="max-w-[787px] lg:mt-[100px] pb-8">
+          <motion.div initial={{opacity:0}} viewport={{once:true}} whileInView={{opacity:1,transition:{duration:1,delay:.2}}} className="max-w-[787px] lg:mt-[100px] pb-8">
             <h2 className="text-neutral-800 text-[40px] font-normal">
               Deep knowledge in the field
             </h2>
@@ -90,7 +121,7 @@ function Experties() {
             >
               Learn more<Image src={arrow} alt="" className="arrow" />
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

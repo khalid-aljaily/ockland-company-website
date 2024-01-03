@@ -12,12 +12,12 @@ import { projects } from "@/components/PortfolioElements";
 import { useParams } from "next/navigation";
 import Image, { StaticImageData } from "next/image";
 import ContactUs from "@/components/ContactUs";
-
+import { motion } from "framer-motion";
 function Page() {
   const { id } = useParams();
   const [api, setApi] = React.useState<CarouselApi>();
-
   const container = React.useRef<HTMLDivElement>(null);
+  const AnimatedImg = motion(Image);
   React.useEffect(() => {
     if (!api) {
       return;
@@ -55,16 +55,33 @@ function Page() {
                 </div>
               </div>
               <div className="px-8 lg:px-[100px] mt-[100px] lg:mt-[140px] ">
-                <p className="ml-auto max-w-[1046px] text-zinc-700 text-lg font-normal font-['Inter Tight'] leading-[25px]">
+                <motion.p
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  key={project?.id}
+                  viewport={{ once: true }}
+                  className="ml-auto max-w-[1046px] text-zinc-700 text-lg font-normal font-['Inter Tight'] leading-[25px]"
+                >
                   {project?.text}
-                </p>
-                <Image
+                </motion.p>
+                <AnimatedImg
+                  initial={{ opacity: 0, x: -5 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  key={project?.id}
                   src={project?.imgs[0] as StaticImageData}
                   alt={project ? project.title : ""}
                   className="max-w-full object-cover lg:max-w-[1046px] h-[600px]  mt-16"
                 />
                 {project?.imgs[1] && (
-                  <Image
+                  <AnimatedImg
+                    initial={{ opacity: 0, x: 5 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    key={project?.id}
                     src={project.imgs[1]}
                     alt={project.title}
                     className="max-w-full object-cover lg:max-w-[1046px] h-[600px]  mt-10 ml-auto"
@@ -83,17 +100,3 @@ function Page() {
 }
 
 export default Page;
-
-const carousel = {
-  Carousel: (
-    <Carousel opts={{ loop: true, startIndex: 2 }}>
-      <CarouselContent>
-        <CarouselItem>1</CarouselItem>
-        <CarouselItem> 2</CarouselItem>
-        <CarouselItem>.3</CarouselItem>
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-  ),
-};

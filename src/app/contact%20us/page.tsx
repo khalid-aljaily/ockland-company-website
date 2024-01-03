@@ -4,18 +4,15 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import locationImg from "@/assets/image 3.png";
 import locationIcon from "@/assets/Vector.svg";
-
+import {motion} from 'framer-motion'
+import PageMainTxt from "@/components/PageMainTxt";
 function page() {
   return (
     <div className="-mx-6 md:-mx-[100px] ">
       <div className="bg-muted px-8 lg:px-[100px] h-[650px] flex items-end py-[64px] ">
-        <div>
-          <h2 className="text-zinc-700 text-[64px] font-normal">Contact us</h2>
-          <p className="mt-[48px] max-w-[535px] text-zinc-700 text-lg font-normal  leading-[25px]">
-            Our team is here to assist you on your journey towards a sustainable
-            and efficient energy furure.
-          </p>
-        </div>
+        <PageMainTxt title="Contact us" text="Our team is here to assist you on your journey towards a sustainable
+            and efficient energy furure."/>
+        
       </div>
 
       <div className="px-8 lg:px-[100px] mt-[100px] lg:mt-[140px]">

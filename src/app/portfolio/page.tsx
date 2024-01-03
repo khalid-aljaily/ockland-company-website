@@ -7,7 +7,7 @@ import people from "@/assets/material-symbols_groups.svg";
 import star from "@/assets/mdi_star.svg";
 import PortfolioElements from "@/components/PortfolioElements";
 import ContactUs from "@/components/ContactUs";
-
+import PageMainTxt from "@/components/PageMainTxt";
 const dist = [
   {
     title: "Innovation",
@@ -31,11 +31,9 @@ function page() {
       >
         <div className="absolute h-full w-full inset-0 bg-black/50" />
         <div className="z-10">
-          <h2 className="text-white text-[64px] font-normal">Portfolio</h2>
-          <p className="mt-[48px] max-w-[535px] text-white text-lg font-normal  leading-[25px]">
-            Explore our portfolio of remarkable projects where innovation and
-            sustainability converge.
-          </p>
+          <PageMainTxt title="Portfolio" text="Explore our portfolio of remarkable projects where innovation and
+            sustainability converge."/>
+          
         </div>
       </div>
       <div className="px-8 lg:px-[100px] mt-[100px] lg:mt-[140px]">

@@ -43,6 +43,7 @@ export default function Footer() {
                         <Link
                           href={"https://www." + link.toLowerCase() + ".com"}
                           className="hover:underline"
+                          target="_blank"
                         >
                           {link}
                         </Link>

@@ -10,6 +10,7 @@ import servicesImg from "@/assets/services.png";
 import { Button } from "@/components/ui/button";
 import arrow from "@/assets/→.svg";
 import Link from "next/link";
+import PageMainTxt from "@/components/PageMainTxt";
 const services = [
   {
     title: "Illumination",
@@ -45,13 +46,11 @@ function page() {
   return (
     <div className="-mx-6 md:-mx-[100px] ">
       <div className="bg-primary px-8 lg:px-[100px] h-[650px] flex items-end py-[64px] ">
-        <div>
-          <h2 className="text-white text-[64px] font-normal">Services</h2>
-          <p className="mt-[48px] max-w-[535px] text-white text-lg font-normal  leading-[25px]">
-            Discover our comprehensive range of services tailored to meet your
-            energy efficiency, LED lighting, photovoltaic energy, and much more.
-          </p>
-        </div>
+      
+          <PageMainTxt title="Services" text=" Discover our comprehensive range of services tailored to meet your
+            energy efficiency, LED lighting, photovoltaic energy, and much more."/>
+         
+        
       </div>
       {/* first section */}
       <div className="px-8 lg:px-[100px] mt-[100px] lg:mt-[140px]">
