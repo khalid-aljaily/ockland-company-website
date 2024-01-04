@@ -82,7 +82,7 @@ function page() {
             </p>
           </div>
           <div className="flex-1">
-            <Image src={servicesImg} alt="srvices" className="max-w-full" />
+            <Image placeholder="blur" src={servicesImg} alt="srvices" className="max-w-full" />
           </div>
         </div>
         <div className="space-y-[48px] max-w-[779px] mr-auto">

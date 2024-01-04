@@ -27,7 +27,7 @@ const AnimatedImg = motion(Image)
             </motion.p>
           </div>
           <motion.div initial= {{opacity:0,x:50}} whileInView={{opacity:1,x:0,transition:{duration:.5,delay:.5}}} viewport={{once:true}} className="flex-1">
-            <Image src={about1} alt="about1" className="max-w-full" />
+            <Image placeholder="blur" src={about1} alt="about1" className="max-w-full" />
           </motion.div>
         </div>
         <motion.p initial= {{opacity:0,x:-10}} whileInView={{opacity:1,x:0,transition:{duration:.5,delay:.2}}} viewport={{once:true}} className="text-zinc-700 text-lg font-normal leading-[25px] max-w-[787px]">
@@ -47,6 +47,7 @@ const AnimatedImg = motion(Image)
         {/* second section */}
         <div className="relative h-[528px]">
           <AnimatedImg
+            placeholder="blur"
             initial={{opacity:0}}
             whileInView={{opacity:1,transition:{duration:.5}}}
             viewport={{once:true}}

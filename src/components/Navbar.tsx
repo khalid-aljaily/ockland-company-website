@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <div className="flex items-center justify-between py-[26px] absolute top-0 z-50 w-[calc(100vw-48px)] md:w-[calc(100%-200px)]">
       <Link href={'/'}>
-      <Image src={pathname == '/' ||pathname=='/services'?logo:pathname=='/portfolio'?white:dark} alt="logo" />
+      <Image priority src={pathname == '/' ||pathname=='/services'?logo:pathname=='/portfolio'?white:dark} alt="logo" />
       </Link>
       <div>
         {
@@ -35,6 +35,7 @@ export default function Navbar() {
         <Button
         className="rounded-full p-2 block lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
+        name="open/close navigation menu"
       >
         {isOpen?<X className="text-white"/>:<AlignJustify className="text-white" />}
       </Button>

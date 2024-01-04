@@ -23,7 +23,7 @@ const AnimateLink = motion(Link)
           
         </div>
       </div>
-      <Image src={heroImage} alt="hero Image" className="  w-full lg:w-1/2  object-cover !m-0" />
+      <Image priority placeholder="blur" src={heroImage} alt="hero Image" className="  w-full lg:w-1/2  object-cover !m-0" />
       
     </div>
   );

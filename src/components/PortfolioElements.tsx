@@ -99,6 +99,8 @@ function PortfolioElements() {
             viewport={{once:true}}
           >
             <Image
+              priority
+              placeholder="blur"
               src={project.imgs[0]}
               alt={project.title}
               className="h-[400px] object-cover rounded-xl"

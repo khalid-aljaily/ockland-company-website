@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import locationImg from "@/assets/image 3.png";
 import locationIcon from "@/assets/Vector.svg";
 import PageMainTxt from "@/components/PageMainTxt";
+import Contact from "@/components/ContactUsForm";
 function page() {
   return (
     <div className="-mx-6 md:-mx-[100px] ">
@@ -38,53 +39,7 @@ function page() {
               </p>
             </div>
           </div>
-          <form action="">
-            <h3 className="text-neutral-800 text-[40px] font-normal mb-5 md:mb-10">
-              Form
-            </h3>
-            <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
-              <input
-                type="text"
-                className="border-muted border focus:!border-primary !outline-none px-5 py-[10px] "
-                placeholder="Name "
-              />
-              <input
-                type="text"
-                className="border-muted border focus:!border-primary !outline-none px-5 py-[10px] "
-                placeholder="Email "
-              />
-              <input
-                type="text"
-                className="border-muted border focus:!border-primary !outline-none px-5 py-[10px]"
-                placeholder="Phone number "
-              />
-              <input
-                type="text"
-                className="border-muted border focus:!border-primary !outline-none px-5 py-[10px]"
-                placeholder="Company (optional) "
-              />
-            </div>
-            <textarea
-              className="border-muted border focus:!border-primary !outline-none px-5 py-[10px] w-full mt-5"
-              placeholder="Message "
-            />
-            <div className="flex items-center my-5">
-              <Checkbox
-                id="confirmation"
-                className="rounded-none border-muted h-6 w-6"
-              />
-              <label
-                htmlFor="confirmation"
-                className="ml-2 max-w-[727px] text-zinc-700 text-lg font-normal font-['Inter Tight'] leading-[25px]"
-              >
-                I consent to Oakland C.E. processing my data for contact
-                purposes.
-              </label>
-            </div>
-            <Button type="button" className="px-6 py-4 rounded-full">
-              Send
-            </Button>
-          </form>
+          <Contact/>
         </div>
         <div className="flex gap-5  mt-[100px] flex-col md:flex-row">
           <div className="relative w-full h-[518px]">

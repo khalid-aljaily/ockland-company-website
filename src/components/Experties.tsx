@@ -80,6 +80,8 @@ const listVariant = {
                 className="relative h-[375px] w-[312px] md:w-auto md rounded-xl overflow-hidden shrink-0"
               >
                 <Image
+                  priority
+                  placeholder="blur"
                   src={item.img}
                   alt={item.title}
                   className=" h-full object-cover hover:scale-105 duration-300 "
@@ -100,7 +102,7 @@ const listVariant = {
           shaping a more sustainable and efficient energy future.
         </motion.p>
         <div className="flex flex-col items-start lg:flex-row bg-muted justify-between -mx-6 px-8 md:-mx-[100px] lg:px-[100px] mt-8 lg:mt-[131px] gap-[40px] lg:gap-[80px]">
-          <Image src={ex5} alt="" className="mt-8 lg:-mt-[71px] lg:mb-[70px] mx-auto" />
+          <Image priority placeholder="blur"  src={ex5} alt="" className="mt-8 lg:-mt-[71px] lg:mb-[70px] mx-auto" />
           <motion.div initial={{opacity:0}} viewport={{once:true}} whileInView={{opacity:1,transition:{duration:1,delay:.2}}} className="max-w-[787px] lg:mt-[100px] pb-8">
             <h2 className="text-neutral-800 text-[40px] font-normal">
               Deep knowledge in the field
