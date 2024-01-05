@@ -78,7 +78,6 @@ function Contact() {
       }));
       setIsLoading(false)
     } else if (name.length > 0 && email.length > 0 && text.length > 0) {
-      console.log("success");
       emailjs
         .send(
           "service_mjqdz3s",
