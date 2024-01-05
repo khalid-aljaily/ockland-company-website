@@ -4,8 +4,10 @@ import emailjs from '@emailjs/browser'
 import { Checkbox } from "./ui/checkbox";
 import { Button } from "./ui/button";
 import axios from "axios";
-import { Loader } from "lucide-react";
-
+import loaderImg from '@/assets/Spinner-1s-200px.svg'
+import { Toaster } from "./ui/toaster";
+import { useToast } from "./ui/use-toast";
+import Image from "next/image";
 type error = {
   name: string | null;
   email: string | null;
@@ -26,7 +28,7 @@ function Contact() {
     number:null
   });
   const [isLoading, setIsLoading] = useState(false);
-
+  const {toast} = useToast()
   function validateEmail(email: string) {
     const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
     return emailRegex.test(email);
@@ -97,7 +99,12 @@ function Contact() {
             setEmail("");
             setName("");
             setText("");
-            setCompany('')
+            setCompany('');
+            setNumber('');
+            toast({
+              title: "Success!",
+              description: "your message was sent to oakland!",
+            })
           },
           (Error:any) => {
             console.log(Error);
@@ -113,6 +120,7 @@ function Contact() {
   };
   return (
     <form action="">
+      <Toaster/>
     <h3 className="text-neutral-800 text-[40px] font-normal mb-5 md:mb-10">
       Form
     </h3>
@@ -185,9 +193,13 @@ function Contact() {
         purposes.
       </label>
     </div>
-    <Button disabled = {isLoading} type="button" className="px-6 py-4 rounded-full" onClick={formValidation}>
-      {isLoading?<Loader/>:'Send'}
+    <div className="w-fit relative">
+
+    <Button disabled = {isLoading} type="button" className="  border-primary px-6 py-4 rounded-full" onClick={formValidation}>
+      Send
     </Button>
+    {isLoading&&<Image src={loaderImg} alt="loader img" className="h-10 w-10 p-0 z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>}
+    </div>
   </form>
   );
 }
