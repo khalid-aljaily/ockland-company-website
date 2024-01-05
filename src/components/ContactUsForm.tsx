@@ -152,7 +152,6 @@ function Contact() {
         type="text"
         className={`${error.number?"border-destructive":'border-muted'} w-full border focus:!border-primary !outline-none px-5 py-[10px]`}
         placeholder="Phone number "
-        inputMode="numeric"
         pattern="[0-9+]*"
         value={number}
         onChange={(e)=>{setError({...error,number:null});handleNumberChange(e)}}
